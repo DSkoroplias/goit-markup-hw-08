@@ -33,6 +33,11 @@
         background-color: transparent;
         border: none;
         padding: 0;
+
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
     }
 
     .mobile-menu__item + .mobile-menu__item {
@@ -74,10 +79,6 @@
         display: flex;
 
         margin-top: 64px;
-    }
-
-    .mobile-menu__social-item + .mobile-menu__social-item {
-        // padding-left: 20px;
     }
 
     .mobile-menu__social-link {

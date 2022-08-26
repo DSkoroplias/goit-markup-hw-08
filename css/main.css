@@ -104,10 +104,10 @@ address {
   color: var(--accent-color);
 }
 
-.link-current {
+a.link_current {
   color: var(--accent-color);
 }
-.link-current::after {
+a.link_current::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -168,6 +168,9 @@ address {
     background-color: transparent;
     border: none;
     padding: 0;
+  }
+  .mobile-menu__close-btn:hover, .mobile-menu__close-btn:focus {
+    fill: var(--accent-color);
   }
   .mobile-menu__item + .mobile-menu__item {
     padding-top: 32px;
