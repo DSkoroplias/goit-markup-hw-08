@@ -26,8 +26,8 @@
         <header class="page-header">
             <div class="container page-header-container">
                 <nav class="navigation">
-                    <a class="logo logo_link" href="./index.html"
-                        >Web<span class="logo__studio">Studio</span></a
+                    <a class="logo logo-header" href="./index.html"
+                        >Web<span class="logo__header-span">Studio</span></a
                     >
                     <ul class="menu">
                         <li class="menu__item">
@@ -35,7 +35,7 @@
                         </li>
                         <li class="menu__item">
                             <a
-                                class="menu__link menu__link_current"
+                                class="menu__link link-current"
                                 href="./portfolio.html"
                                 >Портфолио</a
                             >
@@ -68,6 +68,83 @@
                         >
                     </li>
                 </ul>
+                <button type="button" class="mobile-menu-open" data-menu-open>
+                    <svg class="mobile-menu-open__icon" width="40" height="40">
+                        <use href="./images/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu" data-menu>
+                <div class="container mobile-menu__container">
+                    <button
+                        type="button"
+                        class="mobile-menu__close-btn"
+                        data-menu-close
+                    >
+                        <svg
+                            class="mobile-menu__btn-icon"
+                            width="40"
+                            height="40"
+                        >
+                            <use href="./images/sprite.svg#close-mdl"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__menu">
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./index.html"
+                                >Студия</a
+                            >
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a
+                                class="mobile-menu__link link-current"
+                                href="./portfolio.html"
+                                >Портфолио</a
+                            >
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__contacts">
+                        <li class="mobile-menu__contacts-item">
+                            <a
+                                class="mobile-menu__contacts-tel"
+                                href="tel:+380961111111"
+                                >+38 096 111 11 11</a
+                            >
+                        </li>
+                        <li class="mobile-menu__contacts-item">
+                            <a
+                                class="mobile-menu__contacts-email"
+                                href="mailto:info@devstudio.com"
+                                >info@devstudio.com</a
+                            >
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__social">
+                        <li class="mobile-menu__social-item">
+                            <a class="mobile-menu__social-link" href=""
+                                >Instagram</a
+                            >
+                        </li>
+                        <li class="mobile-menu__social-item">
+                            <a class="mobile-menu__social-link" href=""
+                                >Twitter</a
+                            >
+                        </li>
+                        <li class="mobile-menu__social-item">
+                            <a class="mobile-menu__social-link" href=""
+                                >Facebook</a
+                            >
+                        </li>
+                        <li class="mobile-menu__social-item">
+                            <a class="mobile-menu__social-link" href=""
+                                >LinkedIn</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <!-- Main content-->
@@ -122,12 +199,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf1.jpg"
-                                        alt="Технокряк"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf1.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf1@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf1.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf1@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf1.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf1@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf1.jpg"
+                                            alt="Технокряк"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -145,12 +243,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf2.jpg"
-                                        alt="Постер New Orlean vs Golden Star"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf2.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf2@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf2.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf2@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf2.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf2@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf2.jpg"
+                                            alt="Постер New Orlean vs Golden Star"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -170,12 +289,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf3.jpg"
-                                        alt="Ресторан Seafood"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf3.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf3@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf3.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf3@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf3.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf3@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf3.jpg"
+                                            alt="Ресторан Seafood"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -195,12 +335,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf4.jpg"
-                                        alt="Проект Prime"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf4.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf4@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf4.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf4@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf4.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf4@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf4.jpg"
+                                            alt="Проект Prime"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -220,12 +381,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf5.jpg"
-                                        alt="Проект Boxes"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf5.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf5@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf5.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf5@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf5.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf5@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf5.jpg"
+                                            alt="Проект Boxes"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -245,12 +427,34 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf6.jpg"
-                                        alt="Inspiration has no Borders"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf6.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf6@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf6.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf6@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf6.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf6@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf6.jpg"
+                                            alt="Inspiration has no Borders"
+                                        />
+                                    </picture>
+
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -270,12 +474,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf7.jpg"
-                                        alt="Издание Limited Edition"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf7.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf7@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf7.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf7@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf7.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf7@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf7.jpg"
+                                            alt="Издание Limited Edition"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -295,12 +520,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf8.jpg"
-                                        alt="Проект LAB"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf8.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf8@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf8.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf8@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf8.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf8@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf8.jpg"
+                                            alt="Проект LAB"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -318,12 +564,33 @@
                         <li class="portfolio__list">
                             <a href="" class="portfolio__link">
                                 <div class="portfolio__img-wrapper">
-                                    <img
-                                        src="./images/portfolio/portf9.jpg"
-                                        alt="Growing Business"
-                                        width="370"
-                                        height="294"
-                                    />
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1200px)"
+                                            srcset="
+                                                ./images/portfolio/desktop/desktop-portf9.jpg    1x,
+                                                ./images/portfolio/desktop/desktop-portf9@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/tablet/tablet-portf9.jpg    1x,
+                                                ./images/portfolio/tablet/tablet-portf9@2x.jpg 2x
+                                            "
+                                        />
+                                        <source
+                                            media="(max-width: 768px)"
+                                            srcset="
+                                                ./images/portfolio/mobile/mobile-portf9.jpg    1x,
+                                                ./images/portfolio/mobile/mobile-portf9@2x.jpg 2x
+                                            "
+                                        />
+                                        <img
+                                            src="./images/portfolio/mobile/mobile-portf9.jpg"
+                                            alt="Growing Business"
+                                        />
+                                    </picture>
                                     <p class="portfolio__overlay">
                                         Ресурс предлагает комплексные
                                         предложения с разным уровнем функционала
@@ -348,8 +615,8 @@
         <footer class="footer">
             <div class="container footer__flex-container">
                 <div class="footer__wrapper">
-                    <a class="logo logo_link" href="./index.html"
-                        >Web<span class="logo__footer">Studio</span></a
+                    <a class="logo logo-footer" href="./index.html"
+                        >Web<span class="logo__footer-span">Studio</span></a
                     >
                     <address>
                         <ul class="contact-list">
@@ -377,7 +644,7 @@
                 </div>
                 <div class="footer__icon-wrapper">
                     <h3 class="footer__title">присоединяйтесь</h3>
-                    <ul class="social-list social-list_jc">
+                    <ul class="social-list social-list_jс">
                         <li
                             class="social-list__item social-list__color-icon-bg"
                         >
@@ -440,7 +707,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__mailling">
+                <div class="footer__email">
                     <h3 class="footer__title">Подпишитесь на рассылку</h3>
                     <form
                         name="footer-form"
@@ -454,7 +721,7 @@
                             class="footer-form__email"
                             required
                         />
-                        <button type="submit" class="footer-form-btn">
+                        <button type="submit" class="footer-form-btn btn">
                             Подписаться
                             <svg
                                 class="btn-footer-icon"
@@ -468,5 +735,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>
